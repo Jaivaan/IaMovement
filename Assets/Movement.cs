@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 public class movement : MonoBehaviour
 {
-    private NavMeshAgent agent; // Reference to the NavMeshAgent component
+    private NavMeshAgent agent; 
 
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
+        agent = GetComponent<NavMeshAgent>();
 /*
         if (goal != null)
         {
@@ -21,14 +21,14 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Check if left mouse button was clicked
+        if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Create a ray from the camera to the point where the mouse was clicked
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit)) // Check if the ray hit something
+            if (Physics.Raycast(ray, out hit))
             {
-                agent.SetDestination(hit.point); // Set the destination to the point where the ray hit
+                agent.SetDestination(hit.point);
             }
         }
     }
